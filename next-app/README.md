@@ -13,3 +13,13 @@ const nextConfig = {
 
 module.exports = nextConfig
 ``` 
+
+caso queira rodar apenas o container do next
+basta fazer o build da imagem
+``` sh
+$ docker build -t next-app .
+``` 
+depois rodar essa imagem em um container 
+```sh
+$ docker run -p 3000:3000 next-app
+```
