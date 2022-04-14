@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  next-app:
+    build: ./next-app/
+    ports:
+      - "3000:3000"
+    volumes:
+      - "./next-app:/app"
