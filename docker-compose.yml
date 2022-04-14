@@ -7,3 +7,10 @@ services:
       - "3000:3000"
     volumes:
       - "./next-app:/app"
+  
+  static-app:
+    build: ./static-app/
+    ports:
+      - "3001:80"
+    volumes:
+      - "./static-app:/app"
