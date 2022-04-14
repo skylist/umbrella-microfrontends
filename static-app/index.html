@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    aaaaaaaaaaaaaaaaaaaaaaasdasdasd
+    <h1>STATIC APP</h1>
+    <label for="message">
+        send menssage to nextjs
+        <input type="text" id="message">
+    </label>
+    <button type="button" id="btn-send">send</button>
+
+    <script>
+        document.getElementById('btn-send').addEventListener('click', () => {
+            const message = document.getElementById('message')
+            localStorage.removeItem('message')
+            localStorage.setItem('message', message.value)
+            location.href = '/next-app'
+        })
+    </script>
 </body>
+
 </html>

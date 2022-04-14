@@ -1,6 +1,4 @@
 FROM m4rcu5/lighttpd
 
-WORKDIR /app
-RUN ln -s /app/* /var/www/localhost/htdocs/
-
+WORKDIR /var/www/localhost/htdocs
 EXPOSE 80
